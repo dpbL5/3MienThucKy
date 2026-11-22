@@ -13,8 +13,6 @@ public class LoadingController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI loadingText;
     [SerializeField] private string homeSceneName = "Home";
 
-    bool isLoadingDone = false;
-
     void Start()
     {
         loadingBowl.fillAmount = 0f;
@@ -25,11 +23,11 @@ public class LoadingController : MonoBehaviour
     {
         while (loadingBowl.fillAmount < 1f)
         {
+            loadingText.SetText($"{loadingBowl.fillAmount * 100f:0.0}%");
             loadingBowl.fillAmount += loadingSpeed * Time.deltaTime;
             yield return null;
         }
 
-        isLoadingDone = true;
         SceneManager.LoadScene(homeSceneName);
     }
 }
