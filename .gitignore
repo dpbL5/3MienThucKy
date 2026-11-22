@@ -20,8 +20,8 @@ logs
 /assets/plugins/PlasticSCM*
 *.private
 *.private.meta
-^*.private.[0-9]+$
-^*.private.[0-9]+.meta$
+*.private.[0-9]*
+*.private.[0-9]*.meta
 .vs
 .vscode
 .idea
