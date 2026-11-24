@@ -59,3 +59,7 @@ crashlytics-build.properties
 .DS_Store*
 Thumbs.db
 Desktop.ini
+
+# Local asset recovery backups (do not commit)
+.asset-recovery/
+.commandcode/
